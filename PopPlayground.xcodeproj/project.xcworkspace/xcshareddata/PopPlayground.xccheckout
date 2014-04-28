@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>5B090CBD-4702-48F7-9E7B-B7FA90D03D5A</string>
+	<key>IDESourceControlProjectName</key>
+	<string>PopPlayground</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>D425A51E-0430-41A5-ABD4-5D1384D7F34D</key>
+		<string>ssh://github-callmeed/callmeed/pop-playground.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>PopPlayground/PopPlayground.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>D425A51E-0430-41A5-ABD4-5D1384D7F34D</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github-callmeed/callmeed/pop-playground.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>D425A51E-0430-41A5-ABD4-5D1384D7F34D</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>D425A51E-0430-41A5-ABD4-5D1384D7F34D</string>
+			<key>IDESourceControlWCCName</key>
+			<string>pop-playground</string>
+		</dict>
+	</array>
+</dict>
+</plist>
