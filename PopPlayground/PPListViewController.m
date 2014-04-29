@@ -38,7 +38,8 @@
     {
         self.viewControllers = @[[PPListCellInfo infoWithTitle:@"Decay" segueIdentifier:@"DECAY"],
                                  [PPListCellInfo infoWithTitle:@"Spring Bounce" segueIdentifier:@"SPRING_SIZE"],
-                                 [PPListCellInfo infoWithTitle:@"Alive Button" segueIdentifier:@"SPRING_BUTTONS"]
+                                 [PPListCellInfo infoWithTitle:@"Alive Button" segueIdentifier:@"SPRING_BUTTONS"],
+                                 [PPListCellInfo infoWithTitle:@"Constraint vs. Frame" segueIdentifier:@"SPRING_UI"]
                                  ];
     }
     return self;

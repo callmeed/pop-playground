@@ -11,6 +11,14 @@
 		09CF32F1190F964C00632334 /* PPSpringSizeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09CF32F0190F964C00632334 /* PPSpringSizeViewController.m */; };
 		09CF32F4190FACCB00632334 /* PPSpringButtonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09CF32F3190FACCB00632334 /* PPSpringButtonViewController.m */; };
 		09DEEFB2190FD25900DEF195 /* cross@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 09DEEFB1190FD25900DEF195 /* cross@2x.png */; };
+		09DEEFB8190FE33C00DEF195 /* view@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 09DEEFB3190FE33C00DEF195 /* view@2x.png */; };
+		09DEEFB9190FE33C00DEF195 /* lock@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 09DEEFB4190FE33C00DEF195 /* lock@2x.png */; };
+		09DEEFBA190FE33C00DEF195 /* compose@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 09DEEFB5190FE33C00DEF195 /* compose@2x.png */; };
+		09DEEFBB190FE33C00DEF195 /* time@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 09DEEFB6190FE33C00DEF195 /* time@2x.png */; };
+		09DEEFBC190FE33C00DEF195 /* photo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 09DEEFB7190FE33C00DEF195 /* photo@2x.png */; };
+		09DEEFBE190FE35600DEF195 /* corsica@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 09DEEFBD190FE35600DEF195 /* corsica@2x.jpg */; };
+		09DEEFC0190FE3D700DEF195 /* fullscreen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 09DEEFBF190FE3D700DEF195 /* fullscreen@2x.png */; };
+		09DEEFC3190FE43A00DEF195 /* PPPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09DEEFC2190FE43A00DEF195 /* PPPictureViewController.m */; };
 		C95B1194190F0D93005DC67D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C95B1193190F0D93005DC67D /* Foundation.framework */; };
 		C95B1196190F0D93005DC67D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C95B1195190F0D93005DC67D /* CoreGraphics.framework */; };
 		C95B1198190F0D93005DC67D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C95B1197190F0D93005DC67D /* UIKit.framework */; };
@@ -46,6 +54,15 @@
 		09CF32F2190FACCB00632334 /* PPSpringButtonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPSpringButtonViewController.h; sourceTree = "<group>"; };
 		09CF32F3190FACCB00632334 /* PPSpringButtonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPSpringButtonViewController.m; sourceTree = "<group>"; };
 		09DEEFB1190FD25900DEF195 /* cross@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cross@2x.png"; sourceTree = "<group>"; };
+		09DEEFB3190FE33C00DEF195 /* view@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "view@2x.png"; sourceTree = "<group>"; };
+		09DEEFB4190FE33C00DEF195 /* lock@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lock@2x.png"; sourceTree = "<group>"; };
+		09DEEFB5190FE33C00DEF195 /* compose@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "compose@2x.png"; sourceTree = "<group>"; };
+		09DEEFB6190FE33C00DEF195 /* time@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "time@2x.png"; sourceTree = "<group>"; };
+		09DEEFB7190FE33C00DEF195 /* photo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photo@2x.png"; sourceTree = "<group>"; };
+		09DEEFBD190FE35600DEF195 /* corsica@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "corsica@2x.jpg"; sourceTree = "<group>"; };
+		09DEEFBF190FE3D700DEF195 /* fullscreen@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fullscreen@2x.png"; sourceTree = "<group>"; };
+		09DEEFC1190FE43A00DEF195 /* PPPictureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPPictureViewController.h; sourceTree = "<group>"; };
+		09DEEFC2190FE43A00DEF195 /* PPPictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPPictureViewController.m; sourceTree = "<group>"; };
 		799E71F0E1F847F68D944073 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		C95B1190190F0D93005DC67D /* PopPlayground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PopPlayground.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C95B1193190F0D93005DC67D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -140,6 +157,8 @@
 				09CF32F0190F964C00632334 /* PPSpringSizeViewController.m */,
 				09CF32F2190FACCB00632334 /* PPSpringButtonViewController.h */,
 				09CF32F3190FACCB00632334 /* PPSpringButtonViewController.m */,
+				09DEEFC1190FE43A00DEF195 /* PPPictureViewController.h */,
+				09DEEFC2190FE43A00DEF195 /* PPPictureViewController.m */,
 				C95B11AE190F0D93005DC67D /* Images.xcassets */,
 				C95B119A190F0D93005DC67D /* Supporting Files */,
 			);
@@ -149,7 +168,14 @@
 		C95B119A190F0D93005DC67D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				09DEEFBF190FE3D700DEF195 /* fullscreen@2x.png */,
 				09DEEFB1190FD25900DEF195 /* cross@2x.png */,
+				09DEEFB3190FE33C00DEF195 /* view@2x.png */,
+				09DEEFB4190FE33C00DEF195 /* lock@2x.png */,
+				09DEEFB5190FE33C00DEF195 /* compose@2x.png */,
+				09DEEFB6190FE33C00DEF195 /* time@2x.png */,
+				09DEEFB7190FE33C00DEF195 /* photo@2x.png */,
+				09DEEFBD190FE35600DEF195 /* corsica@2x.jpg */,
 				C95B119B190F0D93005DC67D /* PopPlayground-Info.plist */,
 				C95B119C190F0D93005DC67D /* InfoPlist.strings */,
 				C95B119F190F0D93005DC67D /* main.m */,
@@ -256,9 +282,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				C95B11AF190F0D93005DC67D /* Images.xcassets in Resources */,
+				09DEEFC0190FE3D700DEF195 /* fullscreen@2x.png in Resources */,
+				09DEEFBE190FE35600DEF195 /* corsica@2x.jpg in Resources */,
+				09DEEFB9190FE33C00DEF195 /* lock@2x.png in Resources */,
 				C95B119E190F0D93005DC67D /* InfoPlist.strings in Resources */,
 				C95B11A7190F0D93005DC67D /* Main.storyboard in Resources */,
+				09DEEFBA190FE33C00DEF195 /* compose@2x.png in Resources */,
+				09DEEFBC190FE33C00DEF195 /* photo@2x.png in Resources */,
+				09DEEFB8190FE33C00DEF195 /* view@2x.png in Resources */,
 				09DEEFB2190FD25900DEF195 /* cross@2x.png in Resources */,
+				09DEEFBB190FE33C00DEF195 /* time@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,6 +346,7 @@
 				C95B11A4190F0D93005DC67D /* PPAppDelegate.m in Sources */,
 				C95B11AA190F0D93005DC67D /* PPFirstViewController.m in Sources */,
 				09CF32F1190F964C00632334 /* PPSpringSizeViewController.m in Sources */,
+				09DEEFC3190FE43A00DEF195 /* PPPictureViewController.m in Sources */,
 				09CF32EE190F91F000632334 /* PPListViewController.m in Sources */,
 				C95B11A0190F0D93005DC67D /* main.m in Sources */,
 				09CF32F4190FACCB00632334 /* PPSpringButtonViewController.m in Sources */,

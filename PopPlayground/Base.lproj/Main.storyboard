@@ -55,6 +55,7 @@
                         <segue destination="CZ4-MO-1fc" kind="push" identifier="DECAY" id="gOM-sb-uAK"/>
                         <segue destination="1QB-7T-j8r" kind="push" identifier="SPRING_SIZE" id="HfI-qP-TR4"/>
                         <segue destination="ztq-dl-Sbr" kind="push" identifier="SPRING_BUTTONS" id="kUG-mL-KrF"/>
+                        <segue destination="8pm-Lx-ptY" kind="push" identifier="SPRING_UI" id="9Cf-0D-BGk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Ak-Sq-jmE" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -217,6 +218,76 @@
             </objects>
             <point key="canvasLocation" x="646" y="539"/>
         </scene>
+        <!--Picture View Controller-->
+        <scene sceneID="Jhs-no-0Yy">
+            <objects>
+                <viewController id="8pm-Lx-ptY" customClass="PPPictureViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5V3-TU-Qu7"/>
+                        <viewControllerLayoutGuide type="bottom" id="1DY-HD-kLb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="NoK-TW-Ihw">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Frame" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TxK-tX-U0q">
+                                <rect key="frame" x="136" y="306" width="49" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Constraint" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qf5-Y4-bUs">
+                                <rect key="frame" x="120" y="91" width="80" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="corsica.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="ghf-Lf-jNa">
+                                <rect key="frame" x="69" y="120" width="182" height="118"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="182" id="gdS-3S-hIn"/>
+                                    <constraint firstAttribute="height" constant="118" id="r9N-Rd-lru"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="corsica.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="zEy-9J-BtK">
+                                <rect key="frame" x="69" y="335" width="182" height="118"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ghf-Lf-jNa" firstAttribute="top" secondItem="5V3-TU-Qu7" secondAttribute="bottom" constant="56" id="Ig0-cJ-AjC"/>
+                            <constraint firstAttribute="centerX" secondItem="ghf-Lf-jNa" secondAttribute="centerX" id="dav-w7-1zW"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="v6C-Qd-qmt">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="WGG-UY-1dJ">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Aqx-iv-oqt">
+                                <rect key="frame" x="272" y="6" width="32" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="32" id="6VL-Ea-jKu"/>
+                                    <constraint firstAttribute="height" constant="32" id="8wk-d1-Ogp"/>
+                                </constraints>
+                                <state key="normal" image="fullscreen.png"/>
+                                <connections>
+                                    <action selector="fullscreenButtonWasPressed:" destination="8pm-Lx-ptY" eventType="touchUpInside" id="VjD-Uw-YkV"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="constraintImageView" destination="ghf-Lf-jNa" id="Piq-vh-x5Q"/>
+                        <outlet property="heightConstraint" destination="r9N-Rd-lru" id="O26-hX-Zee"/>
+                        <outlet property="imageView" destination="zEy-9J-BtK" id="BXn-MF-mpO"/>
+                        <outlet property="widthConstraint" destination="gdS-3S-hIn" id="mKd-lg-p6g"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UQp-NC-oIh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="653" y="1927"/>
+        </scene>
         <!--Spring Button View Controller-->
         <scene sceneID="fLn-8M-0bL">
             <objects>
@@ -257,8 +328,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="corsica.jpg" width="600" height="450"/>
         <image name="cross.png" width="64" height="64"/>
         <image name="first" width="30" height="30"/>
+        <image name="fullscreen.png" width="64" height="64"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
