@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		09CF32EE190F91F000632334 /* PPListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09CF32ED190F91F000632334 /* PPListViewController.m */; };
 		09CF32F1190F964C00632334 /* PPSpringSizeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09CF32F0190F964C00632334 /* PPSpringSizeViewController.m */; };
 		09CF32F4190FACCB00632334 /* PPSpringButtonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09CF32F3190FACCB00632334 /* PPSpringButtonViewController.m */; };
 		09DEEFB2190FD25900DEF195 /* cross@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 09DEEFB1190FD25900DEF195 /* cross@2x.png */; };
@@ -34,6 +33,7 @@
 		C95B11C0190F0D93005DC67D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C95B11BE190F0D93005DC67D /* InfoPlist.strings */; };
 		C95B11C2190F0D93005DC67D /* PopPlaygroundTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C95B11C1190F0D93005DC67D /* PopPlaygroundTests.m */; };
 		E3E23F5C2E484CAE95AFBE4D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F130BF34BCB04F218BD03492 /* libPods.a */; };
+		EFF352A31910352600C925E8 /* PPPictureConstraintViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF352A21910352600C925E8 /* PPPictureConstraintViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,8 +47,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		09CF32EC190F91F000632334 /* PPListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPListViewController.h; sourceTree = "<group>"; };
-		09CF32ED190F91F000632334 /* PPListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPListViewController.m; sourceTree = "<group>"; };
 		09CF32EF190F964C00632334 /* PPSpringSizeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPSpringSizeViewController.h; sourceTree = "<group>"; };
 		09CF32F0190F964C00632334 /* PPSpringSizeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPSpringSizeViewController.m; sourceTree = "<group>"; };
 		09CF32F2190FACCB00632334 /* PPSpringButtonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPSpringButtonViewController.h; sourceTree = "<group>"; };
@@ -83,6 +81,8 @@
 		C95B11BD190F0D93005DC67D /* PopPlaygroundTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PopPlaygroundTests-Info.plist"; sourceTree = "<group>"; };
 		C95B11BF190F0D93005DC67D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C95B11C1190F0D93005DC67D /* PopPlaygroundTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PopPlaygroundTests.m; sourceTree = "<group>"; };
+		EFF352A11910352600C925E8 /* PPPictureConstraintViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPPictureConstraintViewController.h; sourceTree = "<group>"; };
+		EFF352A21910352600C925E8 /* PPPictureConstraintViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPPictureConstraintViewController.m; sourceTree = "<group>"; };
 		F130BF34BCB04F218BD03492 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -149,16 +149,7 @@
 				C95B11A2190F0D93005DC67D /* PPAppDelegate.h */,
 				C95B11A3190F0D93005DC67D /* PPAppDelegate.m */,
 				C95B11A5190F0D93005DC67D /* Main.storyboard */,
-				09CF32EC190F91F000632334 /* PPListViewController.h */,
-				09CF32ED190F91F000632334 /* PPListViewController.m */,
-				C95B11A8190F0D93005DC67D /* PPFirstViewController.h */,
-				C95B11A9190F0D93005DC67D /* PPFirstViewController.m */,
-				09CF32EF190F964C00632334 /* PPSpringSizeViewController.h */,
-				09CF32F0190F964C00632334 /* PPSpringSizeViewController.m */,
-				09CF32F2190FACCB00632334 /* PPSpringButtonViewController.h */,
-				09CF32F3190FACCB00632334 /* PPSpringButtonViewController.m */,
-				09DEEFC1190FE43A00DEF195 /* PPPictureViewController.h */,
-				09DEEFC2190FE43A00DEF195 /* PPPictureViewController.m */,
+				EFF3529919101DD600C925E8 /* Root */,
 				C95B11AE190F0D93005DC67D /* Images.xcassets */,
 				C95B119A190F0D93005DC67D /* Supporting Files */,
 			);
@@ -200,6 +191,31 @@
 				C95B11BE190F0D93005DC67D /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EFF3529919101DD600C925E8 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				C95B11A8190F0D93005DC67D /* PPFirstViewController.h */,
+				C95B11A9190F0D93005DC67D /* PPFirstViewController.m */,
+				09CF32EF190F964C00632334 /* PPSpringSizeViewController.h */,
+				09CF32F0190F964C00632334 /* PPSpringSizeViewController.m */,
+				09CF32F2190FACCB00632334 /* PPSpringButtonViewController.h */,
+				09CF32F3190FACCB00632334 /* PPSpringButtonViewController.m */,
+				EFF3529A19101DE800C925E8 /* EnlargeImageViews */,
+			);
+			name = Root;
+			sourceTree = "<group>";
+		};
+		EFF3529A19101DE800C925E8 /* EnlargeImageViews */ = {
+			isa = PBXGroup;
+			children = (
+				09DEEFC1190FE43A00DEF195 /* PPPictureViewController.h */,
+				09DEEFC2190FE43A00DEF195 /* PPPictureViewController.m */,
+				EFF352A11910352600C925E8 /* PPPictureConstraintViewController.h */,
+				EFF352A21910352600C925E8 /* PPPictureConstraintViewController.m */,
+			);
+			name = EnlargeImageViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -346,8 +362,8 @@
 				C95B11A4190F0D93005DC67D /* PPAppDelegate.m in Sources */,
 				C95B11AA190F0D93005DC67D /* PPFirstViewController.m in Sources */,
 				09CF32F1190F964C00632334 /* PPSpringSizeViewController.m in Sources */,
+				EFF352A31910352600C925E8 /* PPPictureConstraintViewController.m in Sources */,
 				09DEEFC3190FE43A00DEF195 /* PPPictureViewController.m in Sources */,
-				09CF32EE190F91F000632334 /* PPListViewController.m in Sources */,
 				C95B11A0190F0D93005DC67D /* main.m in Sources */,
 				09CF32F4190FACCB00632334 /* PPSpringButtonViewController.m in Sources */,
 			);

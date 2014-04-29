@@ -7,70 +7,26 @@
 //
 
 #import "PPPictureViewController.h"
-#import <POP/POP.h>
 
 @interface PPPictureViewController ()
-{
-    BOOL _isInFullscreen;
-}
-@property (weak, nonatomic) IBOutlet UIView *containerView;
-@property (weak, nonatomic) IBOutlet NSLayoutConstraint *widthConstraint;
-@property (weak, nonatomic) IBOutlet NSLayoutConstraint *heightConstraint;
-@property (weak, nonatomic) IBOutlet UIImageView *imageView;
-@property (weak, nonatomic) IBOutlet UIImageView *constraintImageView;
-
 @end
 
 @implementation PPPictureViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
 
 - (IBAction)fullscreenButtonWasPressed:(UIButton *)sender
 {
-    [self performFullScreenAnimationConstraint];
-    [self performFullScreenAnimationFrame];
+    [self performFullScreenAnimation];
     
     _isInFullscreen = !_isInFullscreen;
 }
 
-- (void)performFullScreenAnimationConstraint
-{
-    [self.widthConstraint pop_removeAllAnimations];
-    [self.heightConstraint pop_removeAllAnimations];
-    
-    POPSpringAnimation *heightAnimation = [POPSpringAnimation animationWithPropertyNamed:kPOPLayoutConstraintConstant];
-    heightAnimation.springBounciness = 8;
-    
-    
-    POPSpringAnimation *animation = [POPSpringAnimation animationWithPropertyNamed:kPOPLayoutConstraintConstant];
-    animation.springBounciness = 8;
-    
-    if (!_isInFullscreen)
-    {
-        animation.toValue = @(320.);
-        heightAnimation.toValue = @(208.);
-    }
-    else
-    {
-        animation.toValue = @(182.);
-        heightAnimation.toValue = @(118.);
-    }
-    
-    [self.heightConstraint pop_addAnimation:heightAnimation forKey:@"fullscreen"];
-    [self.widthConstraint pop_addAnimation:animation forKey:@"fullscreen"];
-    
-}
 
-- (void)performFullScreenAnimationFrame
+
+- (void)performFullScreenAnimation
 {
-    CGRect baseRect = CGRectMake(69, 335, 182, 118);
+    CGRect baseRect = CGRectMake(69, self.view.center.y - 118 / 2, 182, 118);
+    CGRect fullRect = CGRectMake(0,self.view.center.y - 208 / 2, 320, 208);
     
     [self.imageView pop_removeAllAnimations];
     
@@ -80,7 +36,7 @@
     
     if (!_isInFullscreen)
     {
-        animation.toValue = [NSValue valueWithCGRect:CGRectMake(0,335, 320, 208)];
+        animation.toValue = [NSValue valueWithCGRect:fullRect];
     }
     else
     {

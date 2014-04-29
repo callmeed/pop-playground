@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <POP/POP.h>
 
 @interface PPPictureViewController : UIViewController
-
+{
+    BOOL _isInFullscreen;
+}
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+- (void)performFullScreenAnimation;
 @end
