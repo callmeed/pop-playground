@@ -54,6 +54,7 @@
                         <outlet property="tableView" destination="2fF-Sx-Gvk" id="wW2-If-DW9"/>
                         <segue destination="CZ4-MO-1fc" kind="push" identifier="DECAY" id="gOM-sb-uAK"/>
                         <segue destination="1QB-7T-j8r" kind="push" identifier="SPRING_SIZE" id="HfI-qP-TR4"/>
+                        <segue destination="ztq-dl-Sbr" kind="push" identifier="SPRING_BUTTONS" id="kUG-mL-KrF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Ak-Sq-jmE" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -216,8 +217,47 @@
             </objects>
             <point key="canvasLocation" x="646" y="539"/>
         </scene>
+        <!--Spring Button View Controller-->
+        <scene sceneID="fLn-8M-0bL">
+            <objects>
+                <viewController id="ztq-dl-Sbr" customClass="PPSpringButtonViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="K4q-8C-M0a"/>
+                        <viewControllerLayoutGuide type="bottom" id="hb0-c5-KWq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="GQY-6s-Twj">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rAR-k0-hs8">
+                                <rect key="frame" x="143" y="154" width="34" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.95686274510000002" green="0.15356567400000001" blue="0.12817974739999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" image="cross.png"/>
+                                <connections>
+                                    <action selector="bigBounceButtonWasPressed:" destination="ztq-dl-Sbr" eventType="touchUpInside" id="ZH9-d6-XSN"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="2ud-kI-38g">
+                                <rect key="frame" x="20" y="74" width="280" height="72"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">This performs a POPSpringAnimation on the "Button". It transform easily and with a good "feeling" the delete button into an add button.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="5Ni-t7-cUE"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JHT-1w-qDX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="653" y="1228"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="cross.png" width="64" height="64"/>
         <image name="first" width="30" height="30"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

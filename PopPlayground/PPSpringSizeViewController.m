@@ -44,14 +44,13 @@
     // First let's remove any existing animations
     CALayer *layer = self.label.layer;
     [layer pop_removeAllAnimations];
+    
     POPSpringAnimation *anim = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerPositionY];
     anim.fromValue = @(100);
     anim.toValue = @(300);
     anim.springBounciness = self.springBouncinessSlider.value;
     anim.springSpeed = self.springSpeedSlider.value;
-    
-//    anim.fromValue = [NSValue valueWithCGRect:self.label.bounds];
-//    anim.toValue = [NSValue valueWithCGRect:CGRectMake(0, 0, 50, 50)];
+ 
 
     anim.completionBlock = ^(POPAnimation *anim, BOOL finished) {
         NSLog(@"Animation has completed.");
