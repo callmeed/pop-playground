@@ -8,3 +8,6 @@
 .DS_Store
 .ruby-version
 .ruby-gemset
+Pods/Pods.xcodeproj/xcuserdata/*
+PopPlayground.xcodeproj/xcuserdata/*
+PopPlayground.xcworkspace/xcuserdata/*
