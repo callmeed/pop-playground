@@ -24,7 +24,7 @@
 - (void)performAnimation
 {
     // We are just referencing the label via tag, because we're lazy
-    UILabel *layer = (UILabel *)[self.view viewWithTag:10];
+    CALayer *layer = [(UILabel *)[self.view viewWithTag:10] layer];
     // First let's remove any existing animations
     [layer pop_removeAllAnimations];
     // POPSpringAnimation *anim = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerPositionY];
