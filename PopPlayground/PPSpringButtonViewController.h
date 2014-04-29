@@ -1,5 +1,5 @@
 //
-//  PPListViewController.h
+//  PPSpringButtonViewController.h
 //  PopPlayground
 //
 //  Created by Francescu on 29/04/2014.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PPListViewController : UIViewController
+@interface PPSpringButtonViewController : UIViewController
 
 @end

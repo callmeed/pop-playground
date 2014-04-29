@@ -5,34 +5,34 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>551A61EC-0324-4C54-91CF-98EDCA017650</string>
+	<string>93F245F7-3E92-4E56-BAAE-3D3FD6D78267</string>
 	<key>IDESourceControlProjectName</key>
 	<string>PopPlayground</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>9EAB9B25-2087-46E1-971F-959804C8BC2C</key>
-		<string>https://github.com/Francescu/pop-playground.git</string>
+		<key>F05D514B-73A4-45B0-B6A2-DA54F9BBC4A0</key>
+		<string>ssh://github.com/callmeed/pop-playground.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>PopPlayground.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>9EAB9B25-2087-46E1-971F-959804C8BC2C</key>
+		<key>F05D514B-73A4-45B0-B6A2-DA54F9BBC4A0</key>
 		<string>..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/Francescu/pop-playground.git</string>
+	<string>ssh://github.com/callmeed/pop-playground.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>9EAB9B25-2087-46E1-971F-959804C8BC2C</string>
+	<string>F05D514B-73A4-45B0-B6A2-DA54F9BBC4A0</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>9EAB9B25-2087-46E1-971F-959804C8BC2C</string>
+			<string>F05D514B-73A4-45B0-B6A2-DA54F9BBC4A0</string>
 			<key>IDESourceControlWCCName</key>
 			<string>pop-playground</string>
 		</dict>
