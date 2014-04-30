@@ -1,7 +1,7 @@
-pop-playground
+Pop Animation Playground for iOS
 ==============
 
-Some example animations using Facebook's Pop animation library. 
+Some example animations using the Facebook Pop animation library for iOS and OS X. 
 
 Getting Started
 --------------
