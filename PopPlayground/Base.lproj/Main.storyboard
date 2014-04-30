@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Weg-gN-Wu1">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13C1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Weg-gN-Wu1">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
@@ -140,12 +140,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="10" contentMode="scaleToFill" text="Welcome" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Zhg-ve-WU7">
+                            <label opaque="NO" clipsSubviews="YES" tag="10" contentMode="scaleToFill" text="Welcome" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Zhg-ve-WU7">
                                 <rect key="frame" x="20" y="150" width="280" height="42"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="AKB-yh-ozZ" appends="YES" id="3o0-Oc-4i7"/>
+                                </connections>
                             </label>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.998" minValue="0.001" maxValue="0.999" translatesAutoresizingMaskIntoConstraints="NO" id="zfd-KF-Btx">
                                 <rect key="frame" x="18" y="425" width="284" height="31"/>
@@ -178,7 +182,7 @@
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="NKf-uj-cBp">
                                 <rect key="frame" x="20" y="68" width="280" height="72"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <string key="text">This performs a POPDecayAnimation on the "Welcome" label. Adjust the sliders to change the velocity and deceleration. The fromValue is always 0.</string>
+                                <string key="text">Tap the "Welcome" label to perform a POPDecayAnimation. Adjust the sliders to reset the label position and change the velocity/deceleration.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -191,22 +195,19 @@
                             <constraint firstAttribute="trailing" secondItem="Zhg-ve-WU7" secondAttribute="trailing" constant="20" symbolic="YES" id="eHs-J5-0HT"/>
                             <constraint firstItem="Zhg-ve-WU7" firstAttribute="top" secondItem="2VE-Yg-loa" secondAttribute="top" constant="150" id="pz4-52-QME"/>
                         </constraints>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="UQq-nG-bga" appends="YES" id="gpI-OB-Tly"/>
-                        </connections>
                     </view>
                     <tabBarItem key="tabBarItem" title="Decay" image="first" id="u1e-5L-l1D"/>
                     <navigationItem key="navigationItem" id="kDb-Go-MWM"/>
                     <connections>
                         <outlet property="decelSlider" destination="zfd-KF-Btx" id="AYb-An-0xj"/>
-                        <outlet property="tapGesture" destination="UQq-nG-bga" id="heN-oS-jyr"/>
+                        <outlet property="tapGesture" destination="AKB-yh-ozZ" id="GXf-rg-y1L"/>
                         <outlet property="velocitySlider" destination="enD-96-EoB" id="h7Y-nO-d3H"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qh2-T1-AhA" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="UQq-nG-bga">
+                <tapGestureRecognizer id="AKB-yh-ozZ">
                     <connections>
-                        <action selector="tapGesturePerformed:" destination="CZ4-MO-1fc" id="WfR-ic-Y83"/>
+                        <action selector="tapGesturePerformed:" destination="CZ4-MO-1fc" id="s3N-qe-AqC"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
