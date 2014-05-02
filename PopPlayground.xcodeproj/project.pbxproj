@@ -18,6 +18,7 @@
 		09DEEFBE190FE35600DEF195 /* corsica@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 09DEEFBD190FE35600DEF195 /* corsica@2x.jpg */; };
 		09DEEFC0190FE3D700DEF195 /* fullscreen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 09DEEFBF190FE3D700DEF195 /* fullscreen@2x.png */; };
 		09DEEFC3190FE43A00DEF195 /* PPPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09DEEFC2190FE43A00DEF195 /* PPPictureViewController.m */; };
+		C92ABFC219145EE8006B9129 /* PPCustomSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = C92ABFC119145EE8006B9129 /* PPCustomSegue.m */; };
 		C95B1194190F0D93005DC67D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C95B1193190F0D93005DC67D /* Foundation.framework */; };
 		C95B1196190F0D93005DC67D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C95B1195190F0D93005DC67D /* CoreGraphics.framework */; };
 		C95B1198190F0D93005DC67D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C95B1197190F0D93005DC67D /* UIKit.framework */; };
@@ -62,6 +63,8 @@
 		09DEEFC1190FE43A00DEF195 /* PPPictureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPPictureViewController.h; sourceTree = "<group>"; };
 		09DEEFC2190FE43A00DEF195 /* PPPictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPPictureViewController.m; sourceTree = "<group>"; };
 		799E71F0E1F847F68D944073 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		C92ABFC019145EE8006B9129 /* PPCustomSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPCustomSegue.h; sourceTree = "<group>"; };
+		C92ABFC119145EE8006B9129 /* PPCustomSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPCustomSegue.m; sourceTree = "<group>"; };
 		C95B1190190F0D93005DC67D /* PopPlayground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PopPlayground.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C95B1193190F0D93005DC67D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C95B1195190F0D93005DC67D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -202,6 +205,8 @@
 				09CF32F0190F964C00632334 /* PPSpringSizeViewController.m */,
 				09CF32F2190FACCB00632334 /* PPSpringButtonViewController.h */,
 				09CF32F3190FACCB00632334 /* PPSpringButtonViewController.m */,
+				C92ABFC019145EE8006B9129 /* PPCustomSegue.h */,
+				C92ABFC119145EE8006B9129 /* PPCustomSegue.m */,
 				EFF3529A19101DE800C925E8 /* EnlargeImageViews */,
 			);
 			name = Root;
@@ -365,6 +370,7 @@
 				EFF352A31910352600C925E8 /* PPPictureConstraintViewController.m in Sources */,
 				09DEEFC3190FE43A00DEF195 /* PPPictureViewController.m in Sources */,
 				C95B11A0190F0D93005DC67D /* main.m in Sources */,
+				C92ABFC219145EE8006B9129 /* PPCustomSegue.m in Sources */,
 				09CF32F4190FACCB00632334 /* PPSpringButtonViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
