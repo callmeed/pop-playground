@@ -19,7 +19,7 @@
             </objects>
             <point key="canvasLocation" x="-450" y="-138"/>
         </scene>
-        <!--Table View Controller - pop-playground-->
+        <!--Table View Controller - Pop Playground-->
         <scene sceneID="N3R-Jl-8ab">
             <objects>
                 <tableViewController id="wK8-wo-WGf" sceneMemberID="viewController">
@@ -122,7 +122,7 @@
                             <outlet property="delegate" destination="wK8-wo-WGf" id="cfh-2d-AFc"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="pop-playground" id="YCA-IH-aYG"/>
+                    <navigationItem key="navigationItem" title="Pop Playground" id="YCA-IH-aYG"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vTP-A0-Z7q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -197,7 +197,7 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Decay" image="first" id="u1e-5L-l1D"/>
-                    <navigationItem key="navigationItem" id="kDb-Go-MWM"/>
+                    <navigationItem key="navigationItem" title="Decay" id="kDb-Go-MWM"/>
                     <connections>
                         <outlet property="decelSlider" destination="zfd-KF-Btx" id="AYb-An-0xj"/>
                         <outlet property="tapGesture" destination="AKB-yh-ozZ" id="GXf-rg-y1L"/>
@@ -213,7 +213,7 @@
             </objects>
             <point key="canvasLocation" x="653" y="-138"/>
         </scene>
-        <!--Spring Size View Controller-->
+        <!--Spring Size View Controller - Label Moving-->
         <scene sceneID="cYK-VK-kwl">
             <objects>
                 <viewController id="1QB-7T-j8r" customClass="PPSpringSizeViewController" sceneMemberID="viewController">
@@ -275,7 +275,7 @@
                             <outletCollection property="gestureRecognizers" destination="YIH-L2-bjK" appends="YES" id="jyr-Ah-T0k"/>
                         </connections>
                     </view>
-                    <navigationItem key="navigationItem" id="Spx-uG-XSA"/>
+                    <navigationItem key="navigationItem" title="Label Moving" id="Spx-uG-XSA"/>
                     <connections>
                         <outlet property="label" destination="p58-GL-eTE" id="JYf-ul-vae"/>
                         <outlet property="springBouncinessSlider" destination="65V-mD-hcU" id="tc7-dL-gg9"/>
@@ -460,7 +460,7 @@
             </objects>
             <point key="canvasLocation" x="715" y="2340"/>
         </scene>
-        <!--Spring Button View Controller-->
+        <!--Spring Button View Controller - Alive Buttons-->
         <scene sceneID="fLn-8M-0bL">
             <objects>
                 <viewController id="ztq-dl-Sbr" customClass="PPSpringButtonViewController" sceneMemberID="viewController">
@@ -481,7 +481,7 @@
                                     <action selector="bigBounceButtonWasPressed:" destination="ztq-dl-Sbr" eventType="touchUpInside" id="ZH9-d6-XSN"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Touch the button to perform a POPSpringAnimation on it. It toggle with a good &quot;feeling&quot; between a delete and an add button." lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="2ud-kI-38g">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tap the button to perform a POPSpringAnimation on it. It will toggle with a good feeling between states." lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="2ud-kI-38g">
                                 <rect key="frame" x="20" y="74" width="280" height="72"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
@@ -491,7 +491,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="5Ni-t7-cUE"/>
+                    <navigationItem key="navigationItem" title="Alive Buttons" id="5Ni-t7-cUE"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JHT-1w-qDX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

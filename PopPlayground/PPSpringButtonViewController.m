@@ -63,6 +63,7 @@
     }
     
     anim.springBounciness = 20;
+    anim.springSpeed = 16;
     
     anim.completionBlock = ^(POPAnimation *anim, BOOL finished) {
         NSLog(@"Animation has completed.");
