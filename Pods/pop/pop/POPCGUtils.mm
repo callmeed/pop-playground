@@ -39,8 +39,12 @@ void POPCGColorGetRGBAComponents(CGColorRef color, CGFloat components[])
     components[0] = components[1] = components[2] = colors[0];
     components[3] = colors[1];
   } else {
-    // TODO HSV and CMYK conversion
-    NSCAssert(NO, @"unsuported color space conversion, component count:%lu", count);
+    // Use CI to convert
+    CIColor *ciColor = [CIColor colorWithCGColor:color];
+    components[0] = ciColor.red;
+    components[1] = ciColor.green;
+    components[2] = ciColor.blue;
+    components[3] = ciColor.alpha;
   }
 }
 
@@ -54,6 +58,23 @@ CGColorRef POPCGColorRGBACreate(const CGFloat components[])
 #else
   return CGColorCreateGenericRGB(components[0], components[1], components[2], components[3]);
 #endif
+}
+
+CGColorRef POPCGColorWithColor(id color)
+{
+  if (CFGetTypeID((__bridge CFTypeRef)color) == CGColorGetTypeID()) {
+    return ((__bridge CGColorRef)color);
+  }
+#if TARGET_OS_IPHONE
+  else if ([color isKindOfClass:[UIColor class]]) {
+    return [color CGColor];
+  }
+#else
+  else if ([color isKindOfClass:[NSColor class]]) {
+    return [color CGColor];
+  }
+#endif
+  return nil;
 }
 
 #if TARGET_OS_IPHONE

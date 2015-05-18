@@ -1,19 +1,18 @@
 /**
  Copyright (c) 2014-present, Facebook, Inc.
  All rights reserved.
- 
+
  This source code is licensed under the BSD-style license found in the
  LICENSE file in the root directory of this source tree. An additional grant
  of patent rights can be found in the PATENTS file in the same directory.
  */
 
 #import "POPVector.h"
-#import "POPAnimationRuntime.h"
 #import "POPCGUtils.h"
 
 namespace POP
 {
-  
+
   Vector::Vector(const size_t count)
   {
     _count = count;
@@ -28,7 +27,7 @@ namespace POP
       memcpy(_values, other.data(), _count * sizeof(CGFloat));
     }
   }
-  
+
   Vector::~Vector()
   {
     if (NULL != _values) {
@@ -37,14 +36,14 @@ namespace POP
     }
     _count = 0;
   }
-  
+
   void Vector::swap(Vector &first, Vector &second)
   {
     using std::swap;
     swap(first._count, second._count);
     swap(first._values, second._values);
   }
-  
+
   Vector& Vector::operator=(const Vector& other)
   {
     Vector temp(other);
@@ -58,7 +57,7 @@ namespace POP
     }
 
     const CGFloat * const values = other.data();
-    
+
     for (NSUInteger idx = 0; idx < _count; idx++) {
       if (_values[idx] != values[idx]) {
         return false;
@@ -72,15 +71,15 @@ namespace POP
     if (_count == other.size()) {
       return false;
     }
-    
+
     const CGFloat * const values = other.data();
-    
+
     for (NSUInteger idx = 0; idx < _count; idx++) {
       if (_values[idx] != values[idx]) {
         return false;
       }
     }
-    
+
     return true;
   }
 
@@ -89,7 +88,7 @@ namespace POP
     if (0 == count) {
       return NULL;
     }
-    
+
     Vector *v = new Vector(count);
     if (NULL != values) {
       memcpy(v->_values, values, count * sizeof(CGFloat));
@@ -102,7 +101,7 @@ namespace POP
     if (NULL == other) {
       return NULL;
     }
-    
+
     return Vector::new_vector(other->size(), other->data());
   }
 
@@ -115,22 +114,22 @@ namespace POP
     Vector *v = new Vector(count);
 
     NSCAssert(count <= 4, @"unexpected count %lu", (unsigned long)count);
-    for (NSUInteger i = 0; i < MIN(count, 4); i++) {
+    for (NSUInteger i = 0; i < MIN(count, (NSUInteger)4); i++) {
       v->_values[i] = vec[i];
     }
-    
+
     return v;
   }
 
   Vector4r Vector::vector4r() const
   {
     Vector4r v = Vector4r::Zero();
-    for (int i = 0; i < _count; i++) {
+    for (size_t i = 0; i < _count; i++) {
       v(i) = _values[i];
     }
     return v;
   }
-  
+
   Vector2r Vector::vector2r() const
   {
     Vector2r v = Vector2r::Zero();
@@ -138,7 +137,7 @@ namespace POP
     if (_count > 1) v(1) = _values[1];
     return v;
   }
-  
+
   Vector *Vector::new_cg_float(CGFloat f)
   {
     Vector *v = new Vector(1);
@@ -159,7 +158,7 @@ namespace POP
     v->_values[1] = p.y;
     return v;
   }
-  
+
   CGSize Vector::cg_size () const
   {
     Vector2r v = vector2r();
@@ -173,7 +172,7 @@ namespace POP
     v->_values[1] = s.height;
     return v;
   }
-  
+
   CGRect Vector::cg_rect() const
   {
     return _count < 4 ? CGRectZero : CGRectMake(_values[0], _values[1], _values[2], _values[3]);
@@ -188,13 +187,32 @@ namespace POP
     v->_values[3] = r.size.height;
     return v;
   }
-  
+
+#if TARGET_OS_IPHONE
+
+  UIEdgeInsets Vector::ui_edge_insets() const
+  {
+    return _count < 4 ? UIEdgeInsetsZero : UIEdgeInsetsMake(_values[0], _values[1], _values[2], _values[3]);
+  }
+
+  Vector *Vector::new_ui_edge_insets(const UIEdgeInsets &i)
+  {
+    Vector *v = new Vector(4);
+    v->_values[0] = i.top;
+    v->_values[1] = i.left;
+    v->_values[2] = i.bottom;
+    v->_values[3] = i.right;
+    return v;
+  }
+
+#endif
+
   CGAffineTransform Vector::cg_affine_transform() const
   {
     if (_count < 6) {
       return CGAffineTransformIdentity;
     }
-    
+
     NSCAssert(size() >= 6, @"unexpected vector size:%lu", (unsigned long)size());
     CGAffineTransform t;
     t.a = _values[0];
@@ -208,7 +226,7 @@ namespace POP
 
   Vector *Vector::new_cg_affine_transform(const CGAffineTransform &t)
   {
-    Vector *v = new Vector(4);
+    Vector *v = new Vector(6);
     v->_values[0] = t.a;
     v->_values[1] = t.b;
     v->_values[2] = t.c;
@@ -225,7 +243,7 @@ namespace POP
     }
     return POPCGColorRGBACreate(_values);
   }
-  
+
   Vector *Vector::new_cg_color(CGColorRef color)
   {
     CGFloat rgba[4];
@@ -239,7 +257,7 @@ namespace POP
       _values[idx] = POPSubRound(_values[idx], sub);
     }
   }
-  
+
   CGFloat Vector::norm() const
   {
     return sqrtr(squaredNorm());
@@ -254,19 +272,19 @@ namespace POP
     return d;
   }
 
-  NSString * const Vector::toString() const
+  NSString * Vector::toString() const
   {
     if (0 == _count)
       return @"()";
-    
+
     if (1 == _count)
       return [NSString stringWithFormat:@"%f", _values[0]];
-    
+
     if (2 == _count)
       return [NSString stringWithFormat:@"(%.3f, %.3f)", _values[0], _values[1]];
-    
+
     NSMutableString *s = [NSMutableString stringWithCapacity:10];
-    
+
     for (NSUInteger idx = 0; idx < _count; idx++) {
       if (0 == idx) {
         [s appendFormat:@"[%.3f", _values[idx]];
@@ -276,8 +294,8 @@ namespace POP
         [s appendFormat:@", %.3f", _values[idx]];
       }
     }
-    
+
     return s;
-    
+
   }
 }

@@ -11,12 +11,9 @@
 
 #import "POPAnimation.h"
 #import "POPAnimationRuntime.h"
-#import "POPAnimationTracer.h"
 #import "POPAnimationTracerInternal.h"
 #import "POPSpringSolver.h"
-#import "POPVector.h"
 #import "POPAction.h"
-#import "POPMath.h"
 
 using namespace POP;
 
@@ -206,6 +203,7 @@ struct _POPAnimationState
   NSMutableDictionary *dict;
   POPAnimationTracer *tracer;
   CGFloat progress;
+  NSInteger repeatCount;
   
   bool active:1;
   bool paused:1;
@@ -221,8 +219,10 @@ struct _POPAnimationState
   bool didReachToValue:1;
   bool tracing:1; // corresponds to tracer started
   bool userSpecifiedDynamics:1;
+  bool autoreverses:1;
+  bool repeatForever:1;
   bool customFinished:1;
-  
+
   _POPAnimationState(id __unsafe_unretained anim) :
   self(anim),
   type((POPAnimationType)0),
@@ -236,6 +236,7 @@ struct _POPAnimationState
   dict(nil),
   tracer(nil),
   progress(0),
+  repeatCount(0),
   active(false),
   paused(true),
   removedOnCompletion(true),
@@ -248,6 +249,8 @@ struct _POPAnimationState
   didReachToValue(false),
   tracing(false),
   userSpecifiedDynamics(false),
+  autoreverses(false),
+  repeatForever(false),
   customFinished(false) {}
   
   virtual ~_POPAnimationState()
@@ -309,11 +312,6 @@ struct _POPAnimationState
       // activate & unpause
       active = true;
       setPaused(false);
-      
-      // start us one frame in the past (when we added the animation)
-      if (0 == beginTime) {
-        time -= 1/60.;
-      }
       
       // note start time
       startTime = lastTime = time;
@@ -403,11 +401,8 @@ struct _POPAnimationState
   bool advanceTime(CFTimeInterval time, id obj) {
     bool advanced = false;
     bool computedProgress = false;
-    
     CFTimeInterval dt = time - lastTime;
-    if (dt < 0.001)
-      return advanced;
-    
+
     switch (type) {
       case kPOPAnimationSpring:
         advanced = advance(time, dt, obj);
