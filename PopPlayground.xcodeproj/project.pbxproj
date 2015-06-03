@@ -33,6 +33,7 @@
 		C95B11B8190F0D93005DC67D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C95B1197190F0D93005DC67D /* UIKit.framework */; };
 		C95B11C0190F0D93005DC67D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C95B11BE190F0D93005DC67D /* InfoPlist.strings */; };
 		C95B11C2190F0D93005DC67D /* PopPlaygroundTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C95B11C1190F0D93005DC67D /* PopPlaygroundTests.m */; };
+		DDF010151B1EE71B00945DBE /* PPRotateImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF010141B1EE71B00945DBE /* PPRotateImageViewController.m */; };
 		E3E23F5C2E484CAE95AFBE4D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F130BF34BCB04F218BD03492 /* libPods.a */; };
 		EFF352A31910352600C925E8 /* PPPictureConstraintViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF352A21910352600C925E8 /* PPPictureConstraintViewController.m */; };
 /* End PBXBuildFile section */
@@ -85,6 +86,8 @@
 		C95B11BD190F0D93005DC67D /* PopPlaygroundTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PopPlaygroundTests-Info.plist"; sourceTree = "<group>"; };
 		C95B11BF190F0D93005DC67D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C95B11C1190F0D93005DC67D /* PopPlaygroundTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PopPlaygroundTests.m; sourceTree = "<group>"; };
+		DDF010131B1EE71B00945DBE /* PPRotateImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPRotateImageViewController.h; sourceTree = "<group>"; };
+		DDF010141B1EE71B00945DBE /* PPRotateImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPRotateImageViewController.m; sourceTree = "<group>"; };
 		EFF352A11910352600C925E8 /* PPPictureConstraintViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPPictureConstraintViewController.h; sourceTree = "<group>"; };
 		EFF352A21910352600C925E8 /* PPPictureConstraintViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPPictureConstraintViewController.m; sourceTree = "<group>"; };
 		F130BF34BCB04F218BD03492 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -217,6 +220,8 @@
 				09CF32F3190FACCB00632334 /* PPSpringButtonViewController.m */,
 				C92ABFC019145EE8006B9129 /* PPCustomSegue.h */,
 				C92ABFC119145EE8006B9129 /* PPCustomSegue.m */,
+				DDF010131B1EE71B00945DBE /* PPRotateImageViewController.h */,
+				DDF010141B1EE71B00945DBE /* PPRotateImageViewController.m */,
 				EFF3529A19101DE800C925E8 /* EnlargeImageViews */,
 			);
 			name = Root;
@@ -378,6 +383,7 @@
 				C95B11AA190F0D93005DC67D /* PPFirstViewController.m in Sources */,
 				09CF32F1190F964C00632334 /* PPSpringSizeViewController.m in Sources */,
 				EFF352A31910352600C925E8 /* PPPictureConstraintViewController.m in Sources */,
+				DDF010151B1EE71B00945DBE /* PPRotateImageViewController.m in Sources */,
 				09DEEFC3190FE43A00DEF195 /* PPPictureViewController.m in Sources */,
 				C95B11A0190F0D93005DC67D /* main.m in Sources */,
 				C92ABFC219145EE8006B9129 /* PPCustomSegue.m in Sources */,
